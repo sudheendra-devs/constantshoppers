@@ -234,6 +234,9 @@ text-align: center;
     color:tomato;
 
 }
+.slide{
+    float:left;
+}
 .clothes{
     margin-top: 40px;
 }
