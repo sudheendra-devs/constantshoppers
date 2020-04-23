@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<title>Constant Shoppers</title>
+<link rel="stylesheet" href="styleh.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ </head>
+<body>
+           
+    <header>
+    <div class="container">
+           <div id="branding">
+               <h2 style="font-size:4vw;"><span class="cs">Constant</span> Shoppers</h2>
+           </div>
+                   <div class="intr">
+                   
+                     
+                         <input type="text" placeholder="Search..." id="search1">
+              <select id="sel" onchange="change()" >
+                                           
+              <option   ></option>
+              <option value="1" >Mens clothing</option>
+              <option value="2">Women clothing</option>
+              <option value="3">Kids clothing</option>
+              <option value="4">Electronics</option>
+              <option value="5">Jewelery</option>
+              <option value="6">Toys</option>
+              </select>
+         </div>
+         <div class="intr">
+          <button class="but"  onclick="men()" >
+            <i class="fa fa-search"></i>
+            </button>
+       </div>
+      
+          <div class="toggle-btn">
+<button class="btn2" data-toggle="collapse" data-target="#sidebar"><i class="fa fa-bars"></i></button>
+</div>
+  <div class="collapse navbar-collapse" id="sidebar">
+    <ul class="list" style="list-style-type:none;">
+      <li id="current" ><a href="home.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+                 <li><a href="latestdeals.html">Latest Deals</a></li>
+                 <li><a href="cart.html">Cart</a></li>
+                 <li ><a href="login.html">Login</a></li>
+                 <li><a href="createaccount.html">Create Account</a></li>
+     </ul>
+</div>
+   
+               
+
+  
+    </header>
+
+    </section>
+           <script>
+         function change(){
+           var d=document.getElementById("sel");
+           var displaytext=d.options[d.selectedIndex].text;
+           document.getElementById("search1").value=displaytext;
+         }
+            function men()
+              {
+                var x = document.getElementById("sel").value;
+              if(x==1)
+              {
+              window.open("men.html");
+              window.close();
+              }
+              if(x==2)
+              {
+              window.open("women.html");
+              window.close();
+              }
+              if(x==3)
+              {
+              window.open("kids.html");
+              window.close();
+              }
+              if(x==4)
+              {
+              window.open("ect.html");
+              window.close();
+              }
+              if(x==5)
+              {
+              window.open("jew.html");
+              window.close();
+              }
+              if(x==6)
+              {
+              window.open("toys.html");
+              window.close();
+              }
+              if(x==7)
+              {
+              window.open("acc.html");
+              window.close();
+              }
+              }
+              </script>
+              <section id="ff">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <ul class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active">
+              <li data-target="#myCarousel" data-slide-to="1" >
+              <li data-target="#myCarousel" data-slide-to="2">
+              </ul>
+              <div class="carousel-inner">
+       <div class="carousel-item active">
+    <a href="men.html">
+      <img srcset="https://www.ovsfashion.com/on/demandware.static/-/Sites/default/dwab0fd8bd/13032020/20200314-HP-international_05.jpg" height=50% width=100%> 
+    </a>
+    </div>
+    <div class="carousel-item">
+    <a href="women.html">
+      <img srcset="https://media.bizj.us/view/img/7972492/screen-shot-2015-12-15-at-10127-pm*1200xx1208-680-0-39.png" height=50%  width=100%> 
+    </a>
+   </div>
+   <div class="carousel-item">
+    <a href="ect.html">
+      <img class="img3" srcset="https://cdn.shopify.com/s/files/1/1465/0252/collections/Tech_-_Gadgets_1_1350x.jpg?v=1534234231"  height=50% width="100%"></a>
+    </a>
+    </div>
+    </div>
+      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+     </div> 
+     </div>
+          </section>
+         <fieldset id="table">
+     <div class="menu"  style="font-size:3vw;">
+       <div class="rows">
+         <img srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSSZGwQtRchxakL9VHnhn32QR17YtCkmfjziRVGDCHhK9WM0110&usqp=CAU" width=100%>
+         <p>Get your favuorite deals right away</p>
+         <p>ranging all kind of clothing for everyone</p>
+         <br>
+       </div>
+       <div class="rows">
+         <img srcset="https://img.freepik.com/free-vector/gadgets-with-social-networks_23-2147512011.jpg?size=338&ext=jpg" width="100%">
+       <p>All kind of electronics included with warranty</p>
+      <p>T.v's,laptops entertainment   etc.....</p>
+      <br>
+     </div>
+     <div class="rows">
+      <img srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4GbmpLoMoRDGAmVwrWUSgXvUxa97PZ0bGlI9Sh8Ayr3o04-Lh&usqp=CAU" width="100%">
+    <p>All kind of Jewelery available</p>
+   <p>most trust worthy brands with lowest prices ever.....                                       </p>
+   <br>
+  </div>
+  <div class="rows">
+    <img srcset="https://image.shutterstock.com/image-vector/online-shopping-app-gifts-items-260nw-1101404579.jpg" width="100%">
+  <p>Everything on the go</p>
+ <p> providing the best and striving for excellence                                  </p>
+ <br><br><br>
+</div>
+
+</div>
+         </fieldset>
+      <h1>Constant Shoppers</h1>
+      <p>we here at constant shoppers always try to provide the best service</p>
+      <p>The efforts of our staff is to make your online shopping the smoothest of them all</p>
+      <p>The happiness and ratings you provide us is directly proportional to quality we provide  </p>
+      <p>Happy online shopping</p>
+         <footer>
+      <div class="show">
+          <h3 style="font-size:4vw;">About</h3>
+          <a href="contact.html">Contact Us</a><br>
+          <a href="info.html">About Us</a><br>
+                      </div>
+                      <div class="show">
+                          <h3 style="font-size:4vw;">Help</h3>
+                          <a href="info.html">Payment</a><br>
+                          <a href="info.html">Shipping</a><br>
+                          <a href="info.html">order cancellation</a>
+                      </div>
+                     
+      <div class="container">
+      <p style="font-size:2vw;">Constant Shoppers website, copyright &copy;2020 </p>
+
+</div>
+</footer>
+    </body>
