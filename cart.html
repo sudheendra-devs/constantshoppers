@@ -2,42 +2,66 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width-device-width">
+<meta name="viewport" content="width-device-width, initial-scale=1">
 <title>Constant Shoppers</title>
-<link rel="stylesheet" href="styling/style.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ </head>
 <body>
+           
     <header>
-        <div class="container">
-            
-            <div id="branding">
-                <h1><span class="cs">Constant</span> Shoppers</h1>
-                           </div>
-                           <div class="intr">
-                            <select id="sel">
-                            <option >Search bar....</option>
-                            <option value="1" >Mens clothing</option>
-                            <option value="2">Women clothing</option>
-                            <option value="3">Kids clothing</option>
-                            <option value="4">Electronics</option>
-                            <option value="5">Jewelery</option>
-                            <option value="6">Toys</option>
-                            </select>
-                            <button class="but" onclick="men()"><i class="fa fa-search"></i></button>
-                        </div>
-          <nav>
-           <nav>
-               <ul>
-            <li><a href="home.html">Home</a></li>
-             <li><a href="contact.html">Contact</a></li>
-             <li><a href="latestdeals.html">Latest Deals</a></li>
-             <li class="current"><a href="cart.html">Cart</a></li>
-             <li ><a href="login.html">Login</a></li>
-             <li ><a href="createaccount.html">Create Account</a></li>
-           </ul>
-         </nav>
-         <script>
+    <div class="container">
+           <div id="branding">
+               <h2 style="font-size:4vw;"><span class="cs">Constant</span> Shoppers</h2>
+           </div>
+                   <div class="intr">
+                         <select id="sel" onchange="change()" >
+              
+              <option   ></option>
+              <option value="1" >Mens clothing</option>
+              <option value="2">Women clothing</option>
+              <option value="3">Kids clothing</option>
+              <option value="4">Electronics</option>
+              <option value="5">Jewelery</option>
+              <option value="6">Toys</option>
+              </select>
+              <input type="text" placeholder="Search..." id="search1">
+              <button class="but"  onclick="men()" >
+              <i class="fa fa-search"></i>
+              </button>
+         
+       </div>
+          <div class="toggle-btn">
+<button class="btn2" data-toggle="collapse" data-target="#sidebar"><i class="fa fa-bars"></i></button>
+</div>
+  <div class="collapse navbar-collapse" id="sidebar">
+    <ul class="list" style="list-style-type:none;">
+        <li  ><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+                   <li><a href="latestdeals.html">Latest Deals</a></li>
+                   <li id="current"><a href="cart.html">Cart</a></li>
+                   <li ><a href="login.html">Login</a></li>
+                   <li><a href="createaccount.html">Create Account</a></li>
+       </ul>
+</div>
+   
+               
+
+  
+    </header>
+
+    </section>
+           <script>
+         function change(){
+           var d=document.getElementById("sel");
+           var displaytext=d.options[d.selectedIndex].text;
+           document.getElementById("search1").value=displaytext;
+         }
             function men()
               {
                 var x = document.getElementById("sel").value;
@@ -78,12 +102,9 @@
               }
               }
               </script>
-        
-        </div>
-     </header>
-     <fieldset id="new">
+                   <fieldset id="new">
          <legend class="leg">Your Orders</legend>
-         <img class="del" src="images/delivery.jpg">
+         <img class="del" src="delivery.jpg">
          <p>Order Name:</p>
                   <p>Order Id:</p>
          <p>Estimated delivery date:</p>
@@ -95,7 +116,7 @@
      <fieldset id="rec">
          <legend class="prev">Previous Orders</legend>
          <button class="clo"><i class="fa fa-close"></i></button>
-         <img class="prev1" src="images/prev.jpg">
+         <img class="prev1" src="prev.jpg">
          <p>Order Name:</p>
          
                   <p>Order Id:</p>
@@ -105,17 +126,17 @@
                   <p>Please check the return option before checking out </p>
      </fieldset>
 <footer>
-    <div class="show">
-        <h2>About</h2>
-                <a href="c.html">Contact Us</a><br>
-                <a href=" file:///E:/html/cs2.html#About" >About Us</a><br>
-                            </div>
-                            <div class="show">
-                                <h2>Help</h2>
-                                <a href="info.html">Payment</a><br>
-                                <a href="file:///E:/html/info.html#shipping">Shipping</a><br>
-                                <a href="file:///E:/html/info.html#oc">order cancellation</a>
-                    </div>
+  <div class="show">
+    <h3 style="font-size:4vw;">About</h3>
+    <a href="contact.html">Contact Us</a><br>
+    <a href="info.html">About Us</a><br>
+                </div>
+                <div class="show">
+                    <h3 style="font-size:4vw;">Help</h3>
+                    <a href="info.html">Payment</a><br>
+                    <a href="info.html">Shipping</a><br>
+                    <a href="info.html">order cancellation</a>
+                </div>
     <div class="container">
     <p>Constant Shoppers website, copyright &copy;2020 </p>
 </footer>

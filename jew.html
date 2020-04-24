@@ -2,112 +2,138 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width-device-width">
+<meta name="viewport" content="width-device-width, initial-scale=1">
 <title>Constant Shoppers</title>
-<link rel="stylesheet" href="styling/style.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ </head>
 <body>
-    <header>
-       <div class="container">
            
+    <header>
+    <div class="container">
            <div id="branding">
-               <h1><span class="cs">Constant</span> Shoppers</h1>
-                          </div>
-                          <div class="intr">
-                            <select id="sel">
-                            <option >Search bar....</option>
-                            <option value="1" >Mens clothing</option>
-                            <option value="2">Women clothing</option>
-                            <option value="3">Kids clothing</option>
-                            <option value="4">Electronics</option>
-                            <option value="5">Jewelery</option>
-                            <option value="6">Toys</option>
-                            </select>
-                            <button class="but" onclick="men()"><i class="fa fa-search"></i></button>
-                        </div>
-          <nav>
-              <ul>
-      <li ><a href="home.html">Home</a></li>
-             <li><a href="contact.html">Contact</a></li>
-             <li><a href="latestdeals.html">Latest Deals</a></li>
-             <li ><a href="cart.html">Cart</a></li>
-             <li ><a href="login.html">Login</a></li>
-             <li ><a href="createaccount.html">Create Account</a></li>
-          </ul>
-        </nav>
-        <script>
-        function men()
-          {
-            var x = document.getElementById("sel").value;
-          if(x==1)
-          {
-          window.open("men.html");
-          window.close();
-          }
-          if(x==2)
-          {
-          window.open("women.html");
-          window.close();
-          }
-          if(x==3)
-          {
-          window.open("kids.html");
-          window.close();
-          }
-          if(x==4)
-          {
-          window.open("ect.html");
-          window.close();
-          }
-          if(x==5)
-          {
-          window.open("jew.html");
-          window.close();
-          }
-          if(x==6)
-          {
-          window.open("toys.html");
-          window.close();
-          }
-          if(x==7)
-          {
-          window.open("acc.html");
-          window.close();
-          }
-          }
-          </script>
-      
+               <h2 style="font-size:4vw;"><span class="cs">Constant</span> Shoppers</h2>
+           </div>
+                   <div class="intr">
+                         <select id="sel" onchange="change()" >
+              
+              <option   ></option>
+              <option value="1" >Mens clothing</option>
+              <option value="2">Women clothing</option>
+              <option value="3">Kids clothing</option>
+              <option value="4">Electronics</option>
+              <option value="5">Jewelery</option>
+              <option value="6">Toys</option>
+              </select>
+              <input type="text" placeholder="Search..." id="search1">
+              <button class="but"  onclick="men()" >
+              <i class="fa fa-search"></i>
+              </button>
+         
+       </div>
+          <div class="toggle-btn">
+<button class="btn2" data-toggle="collapse" data-target="#sidebar"><i class="fa fa-bars"></i></button>
+</div>
+  <div class="collapse navbar-collapse" id="sidebar">
+    <ul class="list" style="list-style-type:none;">
+        <li  ><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+                   <li><a href="latestdeals.html">Latest Deals</a></li>
+                   <li ><a href="cart.html">Cart</a></li>
+                   <li ><a href="login.html">Login</a></li>
+                   <li><a href="createaccount.html">Create Account</a></li>
+       </ul>
+</div>
+   
+               
+
+  
     </header>
-    <section id="showcase">
-      <div class="case">
-    <img srcset="https://www.thestatesman.com/wp-content/uploads/2019/07/jewellery.jpg" width="100%" >
-      </div>
-      <div class="case">
-        <img srcset="https://images.indianexpress.com/2016/05/gold-jewellery-thinkstock-480.jpg?w=480" width="100%" >
-          </div>
-          <div class="case">
-            <img srcset="https://www.shaadicart.com/blog/wp-content/uploads/2018/10/maxresdefault-1.jpg" width=95% >
-              </div>
-              <script>
-                var myIndex = 0;
-                carousel();
+
+    </section>
+           <script>
+         function change(){
+           var d=document.getElementById("sel");
+           var displaytext=d.options[d.selectedIndex].text;
+           document.getElementById("search1").value=displaytext;
+         }
+            function men()
+              {
+                var x = document.getElementById("sel").value;
+              if(x==1)
+              {
+              window.open("men.html");
+              window.close();
+              }
+              if(x==2)
+              {
+              window.open("women.html");
+              window.close();
+              }
+              if(x==3)
+              {
+              window.open("kids.html");
+              window.close();
+              }
+              if(x==4)
+              {
+              window.open("ect.html");
+              window.close();
+              }
+              if(x==5)
+              {
+              window.open("jew.html");
+              window.close();
+              }
+              if(x==6)
+              {
+              window.open("toys.html");
+              window.close();
+              }
+              if(x==7)
+              {
+              window.open("acc.html");
+              window.close();
+              }
+              }
+              </script>
+                    <section id="ff">
+                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <ul class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active">
+                      <li data-target="#myCarousel" data-slide-to="1" >
+                      <li data-target="#myCarousel" data-slide-to="2">
+                      </ul>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img srcset="https://www.thestatesman.com/wp-content/uploads/2019/07/jewellery.jpg"  height=50% width=100%> 
+                </div>
+                <div class="carousel-item">
+                <img srcset="https://images.indianexpress.com/2016/05/gold-jewellery-thinkstock-480.jpg?w=480"  height=50%  width=100%> 
+                </div>
+                <div class="carousel-item">
+                  <img class="img3" srcset="https://www.shaadicart.com/blog/wp-content/uploads/2018/10/maxresdefault-1.jpg"  height=50% width="100%"></a>
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                </a>
+                </div>
+                </div> 
                 
-                function carousel() {
-                  var i;
-                  var x = document.getElementsByClassName("case");
-                  for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                  }
-                  myIndex++;
-                  if (myIndex > x.length) {myIndex = 1}
-                  x[myIndex-1].style.display = "block";
-                  setTimeout(carousel, 3000);
-                }
-                </script>
+              <section id="showcase">
+     
     </section>
  
-    <section id="cloth">
+    <section id="cloth" >
     <fieldset class="clothes">
       <legend>Jewelery</legend>
      <div class="row">
@@ -212,17 +238,16 @@
     </section>
     <footer>
       <div class="show">
-      
-          <h2>About</h2>
-                <a href="c.html">Contact Us</a><br>
-                <a href=" file:///E:/html/cs2.html#About" >About Us</a><br>
-                            </div>
-                            <div class="show">
-                                <h2>Help</h2>
-                                <a href="info.html">Payment</a><br>
-                                <a href="file:///E:/html/info.html#shipping">Shipping</a><br>
-                                <a href="file:///E:/html/info.html#oc">order cancellation</a>
-                      </div>
+        <h3 style="font-size:4vw;">About</h3>
+        <a href="contact.html">Contact Us</a><br>
+        <a href="info.html">About Us</a><br>
+                    </div>
+                    <div class="show">
+                        <h3 style="font-size:4vw;">Help</h3>
+                        <a href="info.html">Payment</a><br>
+                        <a href="info.html">Shipping</a><br>
+                        <a href="info.html">order cancellation</a>
+                    </div>
       <div class="container">
       <p>Constant Shoppers website, copyright &copy;2020 </p>
   </footer>
