@@ -106,8 +106,9 @@ float: center;
 
 
 }
-.logimg{
-margin-left:20px;
+.logimg
+{
+    margin-left:50px;
 }
 .userid{
 text-align: initial;
