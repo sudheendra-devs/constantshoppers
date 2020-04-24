@@ -59,6 +59,18 @@
     
         </section>
                <script>
+                 function show(){
+              var x=document.getElementById("password");
+                   if(x.type=="password")
+                   {
+                      x.type="text";
+                   }
+                   else
+                   {
+                       x.type="password";
+                   }
+                 }
+
              function change(){
                var d=document.getElementById("sel");
                var displaytext=d.options[d.selectedIndex].text;
@@ -117,8 +129,8 @@
                     
                 <input type="userid" placeholder="Enter User ID....">
              <br><br>
-                <input type="Password" placeholder="Enter Password"><br><br>
-                <input class="c1" type="Checkbox">show Password</checkbox>
+                <input type="Password" id="password" placeholder="Enter Password"><br><br>
+                <input class="c1" type="Checkbox" onclick="show()">show Password</checkbox>
                 
                 <button type="Login" class="b1">Login</button><br><br>
                <img srcset="images/slide5.jpg" class="logimg"><br>
